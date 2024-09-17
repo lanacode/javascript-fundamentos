@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="media" id="media"></div>
+
+    <script>
+        const qtdAlunos = Number(prompt("Digite o número total de alunos:"));
+
+        let somaNotas = 0;
+        let maiorNota = 0;
+        let menorNota = 100; 
+
+        let sequencia = 1;
+
+        while (sequencia <= qtdAlunos) {
+            let nota = parseFloat(prompt(`Digite a nota do estudante ${sequencia}:`));
+            somaNotas += nota;
+
+            if (nota > maiorNota) {
+                maiorNota = nota;
+            }
+
+            if (nota < menorNota) {
+                menorNota = nota;
+            }
+
+            sequencia++;
+        }
+
+        let mediaTurma = somaNotas / qtdAlunos;
+
+        const mediaDiv = document.getElementById("media");
+    if (mediaDiv) {
+        mediaDiv.innerHTML = `<p><strong>Media:</strong> ${mediaTurma}</p>
+                                <p><strong>Maior Nota:</strong> ${maiorNota}</p>
+                                  <p><strong>Menor Nota:</strong> ${menorNota}</p>`;
+    }
+
+    </script>
+</body>
+
+</html>
