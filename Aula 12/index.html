@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="beatles"></ul>
+    <ul id="endereco"></ul>
+    <script>
+        // tarefas = [
+        //     {"nome":"T1"},
+        //     {"nome":"T2"},
+        //     {"nome":"T3"} ]
+
+        // tarefa =  {"nome":"T1", "completada": true}
+        // console.log(tarefa[0])
+        // console.log(tarefa["completada"])
+
+        const pessoas = [
+            {nome: "John", age: 31},
+            {nome: "Paul", age: 28},
+            {nome: "George", age: 29},
+            {nome: "Ringo", age: 32},
+        ];
+
+        // console.log(pessoas[0]["nome"])
+        // console.log(pessoas[3]["age"])
+        // pessoas[2]["age"] = 28
+        // console.log(pessoas)
+        // pessoas[0]["live"] = false
+        // console.log(pessoas)
+
+        // let ul = document.getElementById('beatles')
+        // ul.innerHTML = pessoas.map(item => `<li>nome: ${item["nome"]}, idade: ${item["age"]} </li>`).join('')
+
+       const endereco = '{"cep":"05424020","address_type":"Rua","address_name":"Professor Carlos Reis","address":"Rua Professor Carlos Reis","state":"SP","district":"Pinheiros","lat":"-23.57022","lng":"-46.69684","city":"São Paulo","city_ibge":"3550308","ddd":"11"}'
+       
+       const obj = JSON.parse(endereco) //deserializando
+       console.log(obj)
+       const serial = JSON.stringify(obj) //serializar
+       console.log(serial)
+
+       //Object.keys
+       console.log(Object.keys(obj))
+       const chaves = Object.keys(obj);
+       let ul_endereco = document.getElementById('endereco')
+       chaves.forEach(chave => {
+            ul_endereco.innerHTML += `<li>${chave}: ${obj[chave]}</li>`
+       })
