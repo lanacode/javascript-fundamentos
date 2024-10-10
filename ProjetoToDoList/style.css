@@ -1,0 +1,98 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+}
+
+body{
+    background-color: #d1d1d1;
+}
+
+.container {
+    background-color: white;
+    width: 500px;
+    height: 700px;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 100px auto 0;
+}
+
+.container h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.inputTask {
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: 350px;
+    height: 40px;
+    padding-left: 10px;
+}
+
+.buttonAddTask {
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    background-color: #003329;
+    color: #ffffff;
+    font-size: 17px;
+    padding: 0 15px;
+    float: right;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.buttonAddTask:hover {
+    opacity: 0.8;
+}
+
+.buttonAddTask:active {
+    opacity: 0.6;
+}
+
+.listTasks {
+    width: 100%;
+    list-style: none;
+    margin-top: 30px;
+}
+
+.listTasks {
+    width: 100%;
+    list-style: none;
+    margin-top: 30px;
+    max-height: 520px; 
+    overflow-y: auto;  
+    padding-right: 10px; 
+}
+
+.task {
+    background-color: #F2F2F2;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+img {
+    height: 25px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.task:hover img {
+    opacity: 1;
+}
+
+.done {
+    background-color: #77b300;
+    text-decoration: line-through;
+}
