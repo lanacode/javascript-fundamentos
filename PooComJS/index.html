@@ -1,0 +1,19 @@
+class pessoa {
+
+    constructor(nome, sobrenome, formacao){
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+        this.formacao = formacao
+    }
+
+    apresentar(){
+        console.log(`Olá, meu nome é ${this.nome} ${this.sobrenome} e eu estudo ${this.formacao}`)
+    }
+    
+}
+
+const ilana = new pessoa('Ilana', 'Nascimento', 'ADS')
+const roberto = new pessoa('Roberto', '', 'RH')
+
+ilana.apresentar();
+roberto.apresentar();
